@@ -1,181 +1,160 @@
-🚀 Resume Screening Automation using NLP
+# 🚀 Resume Screening Automation using NLP
 
-An intelligent system that automatically matches resumes with internship job descriptions using Natural Language Processing (NLP) and Machine Learning similarity techniques.
+An intelligent system that automates **resume screening** and matches candidates with internship job descriptions using **Natural Language Processing (NLP)** and **Machine Learning**. This project reduces manual screening time and improves candidate shortlisting efficiency.
 
-This project demonstrates how organizations can automate candidate shortlisting and significantly reduce manual screening time.
+---
 
-🎯 Project Objective
+## 🎯 Objective
 
-Manual resume screening is time-consuming and inconsistent.
+Manual resume screening is time-consuming and inconsistent.  
 This project builds an automated pipeline that:
 
-✅ Extracts meaningful information from resumes
+- Extracts meaningful information from resumes  
+- Compares candidate profiles with job descriptions  
+- Ranks the most suitable candidates  
+- Displays results in an interactive web dashboard  
 
-✅ Compares candidate profiles with job descriptions
+---
 
-✅ Ranks the most suitable candidates
+## 🧠 How It Works
 
-✅ Displays results in a web dashboard
+1. **Load Data**: Resume dataset (`intern_resumes_sample.csv`) and job descriptions (`jobs.csv`)  
+2. **Preprocess Text**: Clean resumes using spaCy (lemmatization, stopword removal)  
+3. **Feature Extraction**: Convert text to TF-IDF vectors  
+4. **Similarity Matching**: Compute cosine similarity between resumes and job descriptions  
+5. **Candidate Ranking**: Rank candidates for each job role  
+6. **Dashboard Visualization**: Display top candidates with similarity scores in Flask web app  
 
-🧠 How It Works
+---
 
-Resume Dataset → NLP Preprocessing → Feature Extraction → Similarity Matching → Ranking → Web Dashboard
-Step-by-step pipeline:
+## ✨ Features
 
-1️⃣ Load resume dataset (CSV)
+- Automated candidate shortlisting  
+- NLP-based skill extraction  
+- TF-IDF similarity matching  
+- Candidate ranking system  
+- Interactive web dashboard  
+- Data visualization of top candidates  
 
-2️⃣ Clean and normalize text using spaCy
+---
 
-3️⃣ Convert text to numerical vectors using TF-IDF
+## 🖥 Web Application Preview
 
-4️⃣ Compute similarity between resumes and jobs
+### Home Page
+Click **Run Matching** to start the automated screening process.
 
-5️⃣ Rank top candidates per job
+### Results Dashboard
+- Displays top candidates per job  
+- Shows similarity scores  
+- Includes visual ranking charts  
 
-6️⃣ Visualize results in Flask web app
+---
 
+## 🧰 Technology Stack
 
-✨ Features
+| Category | Tools |
+|----------|------|
+| Programming | Python |
+| NLP | spaCy |
+| Machine Learning | Scikit-learn |
+| Data Processing | Pandas |
+| Visualization | Matplotlib |
+| Web Framework | Flask |
 
-✔ Automated resume filtering
+---
 
-✔ NLP-based skill extraction
-
-✔ TF-IDF similarity matching
-
-✔ Candidate ranking system
-
-✔ Interactive Flask dashboard
-
-✔ Data visualization of top candidates
-
-✔ Works on real-world resume dataset
-
-🖥 Web Application Preview
-Home Page
-
-Click to run automated matching.
-
-Results Dashboard
-
-Displays:
-
-Top candidates per job
-
-Similarity scores
-
-Visual ranking charts
-
-🧰 Technologies Used
-Category	Tools
-
-Programming	Python
-
-NLP	spaCy
-
-Machine Learning	Scikit-learn
-
-Data Processing	Pandas
-
-Visualization	Matplotlib
-
-Web Framework	Flask
+## 📂 Project Structure
 
 
-📂 Project Structure
 resume-screening-automation/
-
 │
-
 ├── app.py
-
 ├── jobs.csv
-
 ├── intern_resumes_sample.csv
-
 ├── requirements.txt
-
 ├── README.md
 │
 ├── notebook/
-│   └── Resume_Screening.ipynb
-
+│ └── Resume_Screening.ipynb
 │
-
 ├── templates/
-
-│   ├── index.html
-│   └── results.html
-
+│ ├── index.html
+│ └── results.html
 │
-
 └── static/
-    └── style.css
-    
-⚙️ Installation Guide
+└── style.css
 
-1️⃣ Clone Repository
+
+---
+
+## ⚙️ Installation Guide
+
+1. **Clone Repository**
+
+```bash
 git clone <your-repo-link>
 cd resume-screening-automation
 
-2️⃣ Install Dependencies
+Install Dependencies
+
 pip install -r requirements.txt
 
-3️⃣ Download NLP Model
+Download spaCy English Model
+
 python -m spacy download en_core_web_sm
 
-4️⃣ Run Application
+Run Flask App
+
 python app.py
 
-5️⃣ Open Browser
+Open Browser
+
 http://127.0.0.1:5000
 
 Click Run Matching to view results.
 
 📊 Dataset Information
 
-The system uses:
+Resume dataset (intern_resumes_sample.csv)
 
-Resume dataset (CSV format)
+Job descriptions (jobs.csv)
 
-Job descriptions dataset
+Note: A sample dataset is included for demonstration. Full dataset is not uploaded due to privacy and size constraints.
 
-To ensure privacy and repository size efficiency:
-✔ A sample dataset is included
-
-✔ Full dataset not uploaded
-
-📈 Output Example
+📈 Output
 
 For each job role, the system produces:
 
-✔ Ranked candidate list
+Ranked candidate list
 
-✔ Similarity score
+Similarity score
 
-✔ Visual comparison chart
+Visual comparison chart
 
 🎓 Learning Outcomes
 
-Through this project:
+Applied NLP to real-world data
 
-✔ Applied NLP to real-world data
+Implemented document similarity modeling
 
-✔ Implemented document similarity modeling
+Built an end-to-end ML pipeline
 
-✔ Built an end-to-end ML pipeline
+Developed a deployable web application
 
-✔ Developed a production-style web interface
-
-✔ Practiced data-driven decision automation
+Integrated ML results into a visual dashboard
 
 🔮 Future Improvements
 
-⬜ Support PDF resume uploads
-⬜ Use BERT embeddings for better accuracy
-⬜ Add skill extraction dashboard
-⬜ Deploy web app online
-⬜ Recruiter login system
+Support PDF resume uploads
 
+Use BERT embeddings for higher accuracy
 
+Deploy web app online
 
+Add recruiter analytics dashboard
+
+Multi-job batch matching
+
+👨‍💻 Author
+
+Sobaan
