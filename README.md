@@ -84,7 +84,9 @@ Web Framework	Flask
 
 📂 Project Structure
 resume-screening-automation/
+
 │
+
 ├── app.py
 
 ├── jobs.csv
@@ -174,5 +176,6 @@ Through this project:
 ⬜ Add skill extraction dashboard
 ⬜ Deploy web app online
 ⬜ Recruiter login system
+
 
 
