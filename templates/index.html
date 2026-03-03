@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Screening Automation</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body class="home-page">
+    <div class="page-wrapper">
+        <header class="app-header">
+            <div class="brand">
+                <div class="brand-mark">AI</div>
+                <div class="brand-text">
+                    <span class="brand-title">Resume Screening Automation</span>
+                    <span class="brand-subtitle">NLP‑powered candidate ranking</span>
+                </div>
+            </div>
+        </header>
+
+        <main class="content">
+            <section class="hero-card">
+                <p class="eyebrow">Smart hiring assistant</p>
+                <h1 class="hero-title">Match resumes to roles in one click.</h1>
+                <p class="hero-lead">
+                    Use AI to instantly surface the strongest candidates for every opening,
+                    ranked by how well their resumes match each job description.
+                </p>
+
+                <ul class="feature-list">
+                    <li>Keyword‑aware matching using spaCy and TF‑IDF</li>
+                    <li>Visual similarity scores for quick comparisons</li>
+                    <li>Top candidates per role, ready for review</li>
+                </ul>
+
+                <div class="actions">
+                    <a href="/match" class="primary-btn">
+                        Run matching
+                        <span class="btn-icon">→</span>
+                    </a>
+                </div>
+            </section>
+        </main>
+
+        <footer class="app-footer">
+            <span>Built with Flask, spaCy & scikit‑learn</span>
+        </footer>
+    </div>
+</body>
+</html>

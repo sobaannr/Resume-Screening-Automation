@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matching Results • Resume Screening Automation</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body class="results-page">
+    <div class="page-wrapper">
+        <header class="app-header">
+            <div class="brand">
+                <div class="brand-mark">AI</div>
+                <div class="brand-text">
+                    <span class="brand-title">Resume Screening Automation</span>
+                    <span class="brand-subtitle">Matching results</span>
+                </div>
+            </div>
+            <nav class="header-actions">
+                <a href="/" class="ghost-btn">← Back to dashboard</a>
+            </nav>
+        </header>
+
+        <main class="content">
+            <header class="page-heading">
+                <h1 class="page-title">Top candidates per job</h1>
+                <p class="page-subtitle">
+                    Review ranked candidates and similarity scores for each job description.
+                </p>
+            </header>
+
+            <div class="results-grid">
+                {% for job in results %}
+                <section class="job-card">
+                    <header class="job-card-header">
+                        <div>
+                            <h2 class="job-title">{{ job.Job_Title }}</h2>
+                            <p class="job-meta">Job ID: {{ job.Job_ID }}</p>
+                        </div>
+                    </header>
+
+                    <div class="job-body">
+                        <div class="chart-wrapper">
+                            <img
+                                src="data:image/png;base64,{{ job.Plot_URL }}"
+                                alt="Top candidates chart for {{ job.Job_Title }}"
+                            >
+                        </div>
+
+                        <div class="table-wrapper">
+                            <table class="results-table">
+                                <thead>
+                                    <tr>
+                                        <th>Candidate ID</th>
+                                        <th>Similarity score</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for candidate in job.Top_Candidates %}
+                                    <tr>
+                                        <td>{{ candidate.Candidate_ID }}</td>
+                                        <td>{{ "%.3f"|format(candidate.Similarity_Score) }}</td>
+                                    </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+                {% endfor %}
+            </div>
+        </main>
+
+        <footer class="app-footer">
+            <span>Similarity scores are for screening support only.</span>
+        </footer>
+    </div>
+</body>
+</html>
