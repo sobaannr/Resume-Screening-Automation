@@ -10,29 +10,45 @@ Manual resume screening is time-consuming and inconsistent.
 This project builds an automated pipeline that:
 
 ✅ Extracts meaningful information from resumes
+
 ✅ Compares candidate profiles with job descriptions
+
 ✅ Ranks the most suitable candidates
+
 ✅ Displays results in a web dashboard
 
 🧠 How It Works
+
 Resume Dataset → NLP Preprocessing → Feature Extraction → Similarity Matching → Ranking → Web Dashboard
 Step-by-step pipeline:
 
 1️⃣ Load resume dataset (CSV)
+
 2️⃣ Clean and normalize text using spaCy
+
 3️⃣ Convert text to numerical vectors using TF-IDF
+
 4️⃣ Compute similarity between resumes and jobs
+
 5️⃣ Rank top candidates per job
+
 6️⃣ Visualize results in Flask web app
+
 
 ✨ Features
 
 ✔ Automated resume filtering
+
 ✔ NLP-based skill extraction
+
 ✔ TF-IDF similarity matching
+
 ✔ Candidate ranking system
+
 ✔ Interactive Flask dashboard
+
 ✔ Data visualization of top candidates
+
 ✔ Works on real-world resume dataset
 
 🖥 Web Application Preview
@@ -52,19 +68,31 @@ Visual ranking charts
 
 🧰 Technologies Used
 Category	Tools
+
 Programming	Python
+
 NLP	spaCy
+
 Machine Learning	Scikit-learn
+
 Data Processing	Pandas
+
 Visualization	Matplotlib
+
 Web Framework	Flask
+
+
 📂 Project Structure
 resume-screening-automation/
 │
 ├── app.py
+
 ├── jobs.csv
+
 ├── intern_resumes_sample.csv
+
 ├── requirements.txt
+
 ├── README.md
 │
 ├── notebook/
@@ -101,6 +129,7 @@ Job descriptions dataset
 
 To ensure privacy and repository size efficiency:
 ✔ A sample dataset is included
+
 ✔ Full dataset not uploaded
 
 📈 Output Example
@@ -108,7 +137,9 @@ To ensure privacy and repository size efficiency:
 For each job role, the system produces:
 
 ✔ Ranked candidate list
+
 ✔ Similarity score
+
 ✔ Visual comparison chart
 
 🎓 Learning Outcomes
@@ -116,9 +147,13 @@ For each job role, the system produces:
 Through this project:
 
 ✔ Applied NLP to real-world data
+
 ✔ Implemented document similarity modeling
+
 ✔ Built an end-to-end ML pipeline
+
 ✔ Developed a production-style web interface
+
 ✔ Practiced data-driven decision automation
 
 🔮 Future Improvements
@@ -127,4 +162,5 @@ Through this project:
 ⬜ Use BERT embeddings for better accuracy
 ⬜ Add skill extraction dashboard
 ⬜ Deploy web app online
+
 ⬜ Recruiter login system
