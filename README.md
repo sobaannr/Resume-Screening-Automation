@@ -1,4 +1,4 @@
-#🚀 Resume Screening Automation using NLP
+🚀 Resume Screening Automation using NLP
 
 An intelligent system that automatically matches resumes with internship job descriptions using Natural Language Processing (NLP) and Machine Learning similarity techniques.
 
@@ -96,7 +96,6 @@ resume-screening-automation/
 ├── README.md
 │
 ├── notebook/
-
 │   └── Resume_Screening.ipynb
 
 │
@@ -105,7 +104,9 @@ resume-screening-automation/
 
 │   ├── index.html
 │   └── results.html
+
 │
+
 └── static/
     └── style.css
     
@@ -173,4 +174,5 @@ Through this project:
 ⬜ Add skill extraction dashboard
 ⬜ Deploy web app online
 ⬜ Recruiter login system
+
 
